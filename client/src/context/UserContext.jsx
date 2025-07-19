@@ -7,7 +7,7 @@ export const UserProvider = ({ children }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:3001/allUsers");
+      const response = await fetch("https://point-claiming-system.onrender.com/allUsers");
       const data = await response.json();
       setUsers(data);
     } catch (error) {

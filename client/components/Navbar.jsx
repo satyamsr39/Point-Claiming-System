@@ -9,7 +9,7 @@ const Navbar = () => {
   // Fetch recent claims from the backend
   const handleRecentClaims = async () => {
     try {
-      const response = await fetch("http://localhost:3001/recent-claims");
+      const response = await fetch("https://point-claiming-system.onrender.com/recent-claims");
       const data = await response.json();
       setRecentClaims(data);     // Update state with recent claims
       setShowModal(true);        // Show the modal

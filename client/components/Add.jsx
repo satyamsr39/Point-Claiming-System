@@ -9,7 +9,7 @@ const Add = () => {
   const save = async () => {
     if (!user.trim()) return alert("Username cannot be empty");
 
-    const response = await fetch("http://localhost:3001/Add", {
+    const response = await fetch("https://point-claiming-system.onrender.com/Add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
