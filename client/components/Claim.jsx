@@ -6,11 +6,11 @@ const Claim = () => {
   const [selectedUserId, setSelectedUserId] = useState("");
 
   // Optional: Set the first user as default selection on load
-  // useEffect(() => {
-  //   if (users.length > 0) {
-  //     setSelectedUserId(users[0]._id);
-  //   }
-  // }, [users]);
+  useEffect(() => {
+    if (users.length === 1) {
+      setSelectedUserId(users[0]._id);
+    }
+  }, [users]);
 
   // Handles the claim button click
   const handleClaim = async () => {
